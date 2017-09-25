@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ajax Lab</title>
+  <style>
+  .flexbox-container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  .flexbox-container > div {
+    width: 50%;
+    padding: 10px;
+  }
+  
+  .flexbox-container > div:first-child {
+    margin-right: 20px;
+  }
+  </style>
+</head>
+
+<body>
+  <main id="main">
+  <!-- We're making a GitHub repository search client. It should take a user's search terms, query the GitHub search API for repositories, and display the results in the left-hand column. The user can then click various links in each repository to get more detailed information in the right-hand column.
+
+Create a "Search Repositories" link that calls a searchRepositories function on click, takes the value of a searchTerms text input, and queries the GitHub repository search API. -->
+<!-- 1. USER enters searchTerm in box -->
+<!-- 2. USER clicks link: "Search Repositories"
+      a) onclick="searchRepositories() is executed (see index.js for next step)-->
+    <input type="text" id="searchTerm">
+    <a href="#" id="search" onclick="searchRepositories()">Search Repositories</a>
+    <div id="errors"></div>
+  <!-- 11. // 10. if 1-9 fail, this fires.
+// jquery $(the id element where html is placed).html(the html msg, in this case it is a string of text.) see index.js displayError()-->
+  </main>
+  <div class="flexbox-container">
+    <div>
+
+<!-- Display the collection of repositories inside the results div. Include repository name, description, and a link to the HTML URL. Also include repository owner login, repository owner avatar as an image, and a link to the owner's profile page. Hint: Pay close attention to the structure of the search results! -->
+      <h3>Repositories</h3>
+      <div id="results"></div>
+<!-- Add a "Show Commits" link to each repository result that will call a showCommits function that gets the repository's commits from the GitHub API and display them in the details div.   
+
+(see Handlebars "#results-template" for formatting and placement of 'show commits' link.)  For each commit, list the SHA, the author, the author's login, and the author's avatar as an image. -->
+
+    </div>
+    <div>
+      <h3>Details</h3>
+      <div id="details"></div>
+      <!-- commits from the GitHub API and display them in the details div, displayed here  -->
+    </div>
+  </div>
+  <script src="jquery-3.1.0.min.js"></script>
+  <script src="handlebars.js"></script>
+  <script src="index.js"></script>
+  <!--  -->
+  <script id="results-template" type="text/x-handlebars-template">
+    {{#each items }}
+    <h2><a href="{{ html_url }}">{{ name }}</a></h2>
+<!-- 12.  -->
+    <!-- 'show commits link is defined here for Handlebars template' 
+      and gets displayed under Repositories,
+      when searchRepositories() is called, 
+      after the user has entered a searchTerm, 
+       and clicked "Search Repositories button" -->
+<!-- note on "data-"  -->
+<!-- data-owner and data-repository, are a way of using data- to pass variables around DOM -->
+<!-- when this data is compiled with Handlebars, these 2 items will have their own property in the dataset.<name of property> which is available to the function we call in step 13. showCommits() -->
+<!-- so if you put a debugger after top line of function showCommits()el {
+    you can go to chrome console and see: 
+    >el.dataset.repository
+         "smithwebtek.github.io"
+    >el.dataset.owner
+         "smithwebtek"
+  ....as a result of setting these in our <a href="#" ....Show Commits link......>
+ -->
+    <p><a href="#" data-repository="{{ name }}" data-owner="{{ owner.login }}" onclick="showCommits(this)">Show Commits</a></p>
+    <p>{{ description }}</p>
+    <div>{{> userDetails owner }}</div>
+    <hr> {{/each}}
+  </script>
+  <!--  -->
+  <script id="commits-template" type="text/x-handlebars-template">
+    <ul>
+      {{#each this }}
+      <li>
+        <h3>{{ sha }}</h3>
+        <p> {{ commit.message }} </p>
+        <div> {{> userDetails author }} </div>
+      </li>
+      {{/each }}
+    </ul>
+  </script>
+  <!--  -->
+  <script id="user-details-partial" type="text/x-handlebars-template">
+    <h4><a href="{{ url }}">{{ login }}</a></h4>
+    <img width="32px" height="32px" src="{{ avatar_url }}">
+  </script>
+</body>
+
+</html>
