@@ -4,34 +4,71 @@ let nums2 = [10,11,12,13,14,15,16,17,18,19]
 let nums3 = [4,7,2,4,9,2,5,7,8,53,2,4,5,6,6,777,8]
 let pets = ["dog", "dog", "cat", "cat", "bird", "bird", "snake", "turtle", "fish", "fish"]
 
-let evens = [0, 2, 4, 6, 8, 10];
+let evens = [0, 2, 4, 6, 8, 10,12,14,16,18,20];
+let odds = [1,3,5,7,9,11,13,15,17,19,21];
 let misc = [1,5,2,6,4,7,3,5,2,1];
 let fruits = ['apple', 'pear', 'grape'];
 let meals = ['breakfast', 'lunch', 'dinner'];
 let tools = ['wrench', 'hammer', 'screwdriver'];
 let myArrays = fruits.concat(meals.concat(tools.concat(pets)));
- 
 
-function sort_unique(arr) {
-  if (arr.length === 0) return arr;
-  arr = arr.sort(function (a, b) { return a*1 - b*1; });
-  // debugger
+const address = {
+  street1: '11 Broadway',
+  street2: '2nd Floor',
+  city: 'New York',
+  state: 'NY',
+  zipCode: 10004
+};
 
-  let ret = [arr[0]];
-  for (let i = 1; i < arr.length; i++) { // start loop at 1 as element 0 can never be a duplicate
-      if (arr[i-1] !== arr[i]) {
-          ret.push(arr[i]);
-      }
-  }
-  return ret.sort();
+const teacher1 = {
+  name: "Zelda McIntyre",
+  phone: "603-424-3244", 
+  address: "11 Main Street",
+  city: "Bedford",
+  state: "NH",
+  options: ["free wifi", "jazz", "Latin", "beginner", "classical", "pop", "music theory", "flex scheduling"]
 }
 
-function mixArrays(ary1, ary2){
-  for (let i = 0; i<ary1.length; i++){
-    ary2.push(ary1[i])
+function showElements(ary){
+  for (const element of ary ) {
+    console.log(element)
   }
-  sort_unique(ary2)
-  return ary2
 }
 
+function foreachElements(ary){
+  ary.forEach(function(element){
+    console.log(element)
+  })
+}
 
+function whileElements(ary){
+  let counter = 0
+  while (counter < ary.length){
+    console.log(ary[counter++])
+  }
+}
+
+function charsOfElements(ary){
+  for (const element of ary){
+    for (const char of element){
+      console.log(char)
+    }
+  }
+}
+
+function logKeys(obj){
+  for (const key in obj){
+    console.log(key + ': ' + obj[key])
+  }
+}
+
+function logKeys2(obj){
+  for (const key in obj){
+    if (typeof obj[key] === "object"){
+      console.log("options:")
+      whileElements(obj[key])
+    } else {
+      console.log(key + ': ' + obj[key])
+    }
+  }
+}
