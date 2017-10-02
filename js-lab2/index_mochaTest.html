@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <div>
+      <h5 id="greeting">Hello!</h5>
+    </div>
+    <div>
+      <div class="banner">
+        <h1>Hello!</h1>
+      </div>
+     
+      <div class="banner">
+        <h1>Sup?</h1>
+      </div>
+     
+      <div class="banner">
+        <h5>Tinier heading</h5>
+      </div>
+    </div>
+    <script>
+      var elements = document.getElementsByClassName('banner');
+      var divs = document.getElementsByTagName('div');
+
+      function changeText(elements){
+        for (var i = elements.length - 1; i >= 0; i--) {
+          document.getElementsByClassName('banner')[i].innerText = "For the " + i + " time...I told you to change your innerText!";
+        }
+      }
+
+      function changeBackground(divs){
+        for (var i = divs.length - 1; i >= 0; i--) {
+          document.getElementsByTagName('div')[i].tagName = 'DIV class="red"';
+        }
+      }
+    </script>
+    <script src="index4.js"></script>
+  </body>
+</html>
