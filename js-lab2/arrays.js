@@ -57,9 +57,27 @@ const oldAccounts = [
 ];
 
 
+const pianos = [
+  {brand: "Yamaha", model: "P2", finish: "Polished Ebony"},
+  {brand: "Yamaha", model: "U1", finish: "Walnut"},
+  {brand: "Steinway", model: "B", finish: "Satin Ebony"}
+]
 
-
-
-
-
-
+const owners = {
+  "Sam Jones": {
+    address: "123 Main St", 
+    city: "Bedford", 
+    state: "NH"
+  },
+  "Mary Contrary": {
+    address: "14 Oriole Drive",
+    city: "North Andover",
+    state: "MA"
+  },
+  "Joe Barbato": {
+    address: "55 Rte 1",
+    city: "Saugas",
+    state: "MA"
+  }
+}
+ 
