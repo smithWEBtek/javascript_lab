@@ -6,7 +6,7 @@ let mixedNumsAndLetters = [4,'f','h',4,'t',3,'r', 5,'D',3,'t','q',4,'B',7,9,'E']
 let myString = ""
 let colors = ['red','green','blue','violet', 'yellow', 'orange', 'black', 'turquoise', 'magenta', 'aqua']
 let fruits = ["mango", "apple", "grape", "bananna", "plum", "durian"]
-let pets = ['cat', 'dog', 'fish', 'bird', 'hamster']
+let pets = ['turtle', 'lobster', 'lemur', 'ferret', 'cat', 'dog', 'fish', 'bird', 'hamster']
 
 
 const users = [
@@ -58,7 +58,7 @@ const oldAccounts = [
 
 
 const pianos = [
-  {brand: "Yamaha", model: "P2", finish: "Polished Ebony"},
+  {brand: "Baldin", model: "R", finish: "Mahogany Polish"},
   {brand: "Yamaha", model: "U1", finish: "Walnut"},
   {brand: "Steinway", model: "B", finish: "Satin Ebony"}
 ]
@@ -78,6 +78,16 @@ const owners = {
     address: "55 Rte 1",
     city: "Saugas",
     state: "MA"
+  },
+  "Tom Thumb": {
+    address: "32 Pond Park Place Blvd",
+    city: "Leavittown",
+    state: "MD"
+  },
+  "Patty Petit": {
+    address: "332 Park Place",
+    city: "Grover",
+    state: "OH"
   }
 }
  
