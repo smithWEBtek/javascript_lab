@@ -1,11 +1,19 @@
+
 let evens = [2,4,6,8,10]
+
 let odds = [1,3,5,7,9,11]
+
 let mixedNums = [1,2,3,4,5,6,7,8,9]
+
 let mixedCaseLetters = ['a','e','b','h','y','r','d','Y','E','G','o','u','j','h']
+
 let mixedNumsAndLetters = [4,'f','h',4,'t',3,'r', 5,'D',3,'t','q',4,'B',7,9,'E']
+
 let myString = ""
+
 let colors = ['red','green','blue','violet', 'yellow', 'orange', 'black', 'turquoise', 'magenta', 'aqua']
 let fruits = ["mango", "apple", "grape", "bananna", "plum", "durian"]
+
 let pets = ['turtle', 'lobster', 'lemur', 'ferret', 'cat', 'dog', 'fish', 'bird', 'hamster']
 
 const products = [
@@ -77,6 +85,13 @@ const pianos = [
   {brand: "Steinway", model: "B", finish: "Satin Ebony", price: 55000},
   {brand: "Wurlitzer", model: "console", finish: "Walnut", price: 500},
   {brand: "Kawai", model: "CX-10", finish: "Polished Ebony", price: 2500}
+]
+
+const orders = [
+  { amount: 250 },
+  { amount: 400 },
+  { amount: 100 },
+  { amount: 325 }
 ]
 
 const owners = {

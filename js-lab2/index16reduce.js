@@ -58,10 +58,40 @@ let dogs = animals.filter(isDog)
 let cats = animals.filter(isCat)
 
 // return an array of all animal names, using map function
+// first using for loop: 
 
+// function animalNames(arr){
+//   let names = [] 
+//   for(let i = 0; i<arr.length; i++){
+//     names.push(arr[i].name)
+//   }
+//   return names
+// }
 
-const findNames = function(animal){
-  return animal.name
-}
+//  now using map 
 
+// const findNames = function(animal){
+//   return animal.name + " is a " + animal.species
+// }
+// using arrow function
+const findNames = (animal)=>animal.name
 let animalNames = animals.map(findNames)
+
+//  get total amount of orders[amount]s, using for loop 
+
+// const totalAmount = function(orders){
+  //   let total = 0
+  //   for (let i = 0; i<orders.length; i++){
+    //     total += orders[i].amount
+    //   }
+    //   return total 
+    // }
+
+//  get total amount of orders[amount]s, using reduce
+// const totalAmount = orders.reduce(function(sum, order) {
+//   console.log("hello", sum, order)
+//   return sum + order.amount
+// }, 0)
+
+//  same thing, using reduce with arrow function
+const totalAmount = orders.reduce((sum, order) => sum + order.amount, 0)

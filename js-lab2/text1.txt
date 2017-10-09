@@ -1,0 +1,6 @@
+"Mark Johansson waffle iron 80 2 \n
+Mark Johansson blender 200 1\n
+Mark Johansson knife 18 4\n
+Nikita Smith waffle iron 80 2\n
+Nikita Smith blender 10 2\n
+Nikita Smith knife 20 3\n"
