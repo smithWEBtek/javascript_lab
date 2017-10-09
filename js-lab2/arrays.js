@@ -8,6 +8,21 @@ let colors = ['red','green','blue','violet', 'yellow', 'orange', 'black', 'turqu
 let fruits = ["mango", "apple", "grape", "bananna", "plum", "durian"]
 let pets = ['turtle', 'lobster', 'lemur', 'ferret', 'cat', 'dog', 'fish', 'bird', 'hamster']
 
+const products = [
+  { name: 'Head & Shoulders Shampoo', price: 4.99 },
+  { name: 'Twinkies', price: 7.99 },
+  { name: 'Oreos', price: 6.49 },
+  { name: 'Jasmine-scented bath pearls', price: 13.99 }
+];
+
+let animals = [
+  { name: 'Flufykins', species: 'rabbit'},
+  { name: 'Caro', species: 'dog'},
+  { name: 'Hamilton', species: 'dog'},
+  { name: 'Harold', species: 'fish'},
+  { name: 'Ursula', species: 'cat'},
+  { name: 'Jimmy', species: 'fish'}
+]
 
 const users = [
   {
@@ -56,11 +71,12 @@ const oldAccounts = [
   {name: 'Len', userID: 44, title: 'Developer Apprentice', accessLevel: 'user' }
 ];
 
-
 const pianos = [
-  {brand: "Baldin", model: "R", finish: "Mahogany Polish"},
-  {brand: "Yamaha", model: "U1", finish: "Walnut"},
-  {brand: "Steinway", model: "B", finish: "Satin Ebony"}
+  {brand: "Baldin", model: "R", finish: "Mahogany Polish", price: 13900},
+  {brand: "Yamaha", model: "U1", finish: "Walnut", price: 7500 },
+  {brand: "Steinway", model: "B", finish: "Satin Ebony", price: 55000},
+  {brand: "Wurlitzer", model: "console", finish: "Walnut", price: 500},
+  {brand: "Kawai", model: "CX-10", finish: "Polished Ebony", price: 2500}
 ]
 
 const owners = {

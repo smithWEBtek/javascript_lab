@@ -112,3 +112,112 @@ function findFirst10Primes(){
   // limit the arry to the first 10
   return newArray.slice(0,10)
 }
+
+const totalPianos = function (pianos) {
+  let totalPrice = 0
+  pianos.forEach(function (member){
+    totalPrice += member.price
+  })
+  return totalPrice
+}
+
+const listObjKeyValues = function (obj, keyName){
+  let keyValues = []
+  for (const member of obj){
+    keyValues.push(member[keyName])
+  }
+  return keyValues
+} 
+
+const getTotalAmountForProducts = function (products) {
+  let totalPrice = 0
+
+  prodcuts.forEach(function (products){
+    totalPrice += product.price 
+  })
+  return totalPrice 
+}
+
+const gatherProductNames = function (products) {
+  const names = [];
+  products.forEach(function (product) {
+    names.push(product.name);
+  });
+  return names;
+};
+
+const reduceProductNames = function (agg, el, i, arr) {
+  console.log('The aggregate up to this point is:', agg);
+  console.log("The current element's name is:", el.name);
+  console.log('The index of the current element is:', i);
+  console.log('----------------');
+ 
+  // return [...agg, el.name];
+};
+
+// products.reduce(reduceProductNames, []);
+
+const reduceProductPrices = function (agg, el, i, arr) {
+  console.log('The aggregate up to this point is:', agg);
+  console.log('The index of the current element is:', i);
+  console.log("The current element's price is:", el.price);
+  console.log('----------------');
+ 
+  return agg + el.price;
+};
+
+// products.reduce(reduceProductPrices, 0);
+
+const stringify = function (agg, el, i, arr) {
+  let stringifiedElement = el.name + ' is $' + el.price + '. ';
+  if (i === arr.length - 1) {
+    stringifiedElement += 'The total price is $' + (agg.totalPrice + el.price) + '.';
+    return agg.string + stringifiedElement;
+  }
+  return {
+    string: agg.string + stringifiedElement,
+    totalPrice: agg.totalPrice + el.price
+  };
+};
+ 
+// products.reduce(stringify, { string: '', totalPrice: 0 });
+
+ 
+const figureTax = function (item, priceInCents, exemtItems, rate, country) {
+  const formattedPrice = '$' + (priceInCents / 100).toFixed(2);
+ 
+  const exemptItems = ['queso', 'futbol', 'tequila', 'avocado'];
+  const exempt = exemptItems.indexOf(item.toLowerCase()) > -1;
+ 
+  const taxRate = 0.05;
+  const taxDue = exempt ? 0 : priceInCents * taxRate / 100;
+  const formattedTaxDue = '$' + taxDue.toFixed(2);
+ 
+  console.log(`In Mexico, ${item} costs ${formattedPrice}.`);
+  console.log('That item', exempt ? 'is' : 'is not', 'exempt from taxation.');
+  console.log(`The total tax due is: ${formattedTaxDue}.`);
+};
+ 
+const newTaxFunction = function (countryName, taxRate, ...exemptItems) {
+  return function (item, priceInCents) {
+// debugger
+
+    const formattedPrice = '$' + (priceInCents / 100).toFixed(2);
+    const exempt = exemptItems.indexOf(item) > -1;
+    const taxDue = exempt ? 0 : priceInCents * taxRate / 100;
+    const formattedTaxDue = '$' + taxDue.toFixed(2);
+ 
+    console.log(`In ${countryName}, ${item} costs ${formattedPrice}.`);
+    console.log('That item', exempt ? 'is' : 'is not', 'exempt from taxation.');
+    console.log(`The total tax due is: ${formattedTaxDue}.`);
+  };
+};
+
+const franceTax = newTaxFunction('France', 0.15, 'wine', 'macaron', 'baguette', 'croissant');
+
+const canadaTax = newTaxFunction('Canada', 0.125, 'maple syrup', 'poutine', 'kindness');
+
+const mexicoTax = newTaxFunction('Mexico', 0.05, 'queso', 'futbol', 'tequila', 'avocado');
+
+const croatiaTax = newTaxFunction("Croatia", .33, "chocolate bar", "dental floss")
+
