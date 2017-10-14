@@ -1,35 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 <html>
   <head>
-    <title>JS Lab</title>
+    <title>JS Lab - jQuery demo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js"</script>
+    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
   </head>
   <body>
-    <h1>Not in the styled div...</h1>
-    <h1>Here is another one</h1>
-    <h1>What time is the buffet?</h1>
-    <h1>You gonna eat that?</h1>
-    <h1>I didn't say she would DO you...</h1>
-    <div class="submit_as_link:active">
-        <h1>My Lab Page in the div with style</h1>
-        <textarea rows="4" cols="50">Here is some text within the div, and with the 'textarea'tag</textarea>
-        <div class="col-sm-2">
-        <form>
-        Please enter your info: <br>
-        name: <input></input><br>
-        email: <input></input><br>
-        hometown:  <input></input><br>
-        phone: <input></input><br>
-        tshirt size:  <input></input>
-          
-        </form>
+    <br><br>
+    <div class="container">
+      <div class="row" style="border: 20px solid rgb(190, 174, 174)" style="padding: 20px solid rgb(197, 46, 96)">
+        <h1 class="fa-2x">Here is another one</h4>
+        <h3 style:"display: none">What time is the buffet?</h4>
+        <h3>You gonna eat that?</h4>
+        <div class="div-border">
+          <form id='form1' class="form-border">
+            Please enter your info: <br>
+            name: <input name="name"></input><br>
+            email: <input name="email"></input><br>
+            hometown:  <input name="hometown"></input><br>
+            phone: <input name="phone"></input><br>
+            tshirt size:  <input name="tshirtsize"></input><br>
+            <textarea rows="4" cols="50">describe yourself</textarea>
+          </form>
+        </div>
+        <br>
+          <fieldset class="highlight1">
+            <p>Heat the oven to <meter min="200" max="500"
+              value="250">350 degrees</meter>.</p>
+          </fieldset>
+        <br>
+        <div id='form1' class="div-border highlight2">
+          <form class="form-border">
+            Please enter your meal info: <br>
+            name: <input name="name"></input><br>
+            entree: <input name="entree"></input><br>
+            dessert:  <input name="dessert"></input><br>
+            allergies: <input name="allergies"></input><br>
+            <textarea rows="4" cols="50">describe your favorite meal</textarea>
+          </form>
+        </div>
+        <br><br>
+        <div id='form1' class="div-border highlight3">
+          <form class="form-border">
+            Please enter your job info: <br>
+            title: <input name="title"></input><br>
+            dept: <input name="dept"></input><br>
+            hours:  <input name="hours"></input><br>
+            skills: <input name="skills"></input><br>
+            <textarea rows="4" cols="50">describe your job</textarea>
+          </form>
+        </div>
       </div>
     </div>
+    <div>
+      <table border='1'>
+        <thead align='left'>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>  
+            <td>Joe</td>
+            <td>joe@abc.com</td>
+            <td>Boston</td>
+          </tr>
+          <tr>  
+            <td>Moe</td>
+            <td>moe@abc.com</td>
+            <td>NYC</td>
+          </tr>
+          <tr>  
+            <td>Curly</td>
+            <td>curly@abc.com</td>
+            <td>Los Angeles</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+ 
+    <script src="js/jquery.min.js"></script>
+    <!-- scripts must be BELOW your jquery libarary to work -->
+    <!-- using .min.js instead of .js makes the file smaller, thus Google likes you more -->
+    <script src="js/scripts.js"></script>
     <script src="js/arrays.js"></script>
     <script src="js/index.js"></script>
     <script src="js/arrow.js"></script>
   </body>
-</html>
+  </html>
+  
