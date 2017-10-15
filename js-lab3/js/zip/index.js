@@ -32,3 +32,20 @@ function createDriver() {
     }
   }
 }
+
+function findZip(zip, obj){
+  for (const member of obj){
+    if (member.zip_code === zip){
+      return member
+    }
+  }
+}
+
+function findDistFromBedford(city, state, obj){
+  for (let member of obj){
+    if (member.city === city && member.state === state){
+      return Math.ceil(member.distance)
+    }
+  }
+}
+ 
