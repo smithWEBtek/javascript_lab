@@ -1,44 +1,26 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Zip Code JS</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js"</script>
-    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet"/>
+    <title>Creating and Inserting DOM Elements</title>
   </head>
+
   <body>
-    <br><br>
-    <div class="container">
-      <div class="row" style="border: 5px solid rgb(190, 174, 174)" style="padding: 20px solid rgb(197, 46, 96)">
-     
-        <h3>Scheduler</h4>
-        <div class="div-border">
-          <form id='form1' class="form-border">
-            Please enter your info: <br>
-            name: <input name="name"></input><br>
-            email: <input name="email"></input><br>
-            address:  <input name="address"></input><br>
-            city:  <input name="hometown"></input><br>
-            state:  <input name="state"></input><br>
-            phone: <input name="phone"></input><br>
-            zip:  <input id="zip" name="zip"></input><br>
-            <textarea rows="4" cols="50">describe yourself</textarea>
-          </form>
+    <main id="main">
+      <div class="inline-block col-1">Today I had a correspondence.</div><br>
+      <div class="inline-block col-2">Today I had a correspondence.</div><br>
+ 
+      <div class="sm-flex">
+          <div>Hamburger</div>
+          <div>Hot Dog</div>
         </div>
-      </div>
-    </div>
-    <script>require('dotenv').config()</script>
-    <script src="js/jquery.js"></script>
-    <!-- <script src="js/index.js"></script> -->
-    <script src="js/zip/zipcodes.js"></script>
-    <script src="js/zip/states.js"></script> 
-    <script src="js/zip/statezip.js"></script> 
-    <script src="js/zip/bedf100.js"></script>
-    <script src="js/zip/index.js"></script> 
+        <div class="md-flex">
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ratione totam architecto fuga dolorum recusandae illo dolores blanditiis similique, dicta nulla inventore illum laudantium porro iure repellendus. Exercitationem, laudantium assumenda?</div>
+        </div>
+        <div class="lg-flex">
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ratione totam architecto fuga dolorum recusandae illo dolores blanditiis similique, dicta nulla inventore illum laudantium porro iure repellendus. Exercitationem, laudantium assumenda?</div>
+        </div>
+    </main>
   </body>
-  </html>
-  
+</html>
